@@ -14,6 +14,12 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'com.codeborne:selenide:7.0.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'com.codeborne:pdf-test:2.1.0'
+    testImplementation 'com.codeborne:xls-test:1.7.2'
+    testImplementation 'org.apache.poi:poi:5.4.1'
+    testImplementation 'com.opencsv:opencsv:5.6'
+    testImplementation 'com.google.code.gson:gson:2.13.2'
+
 }
 
 test {
