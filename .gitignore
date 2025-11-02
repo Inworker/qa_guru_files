@@ -42,5 +42,5 @@ bin/
 ### Mac OS ###
 .DS_Store
 /.idea/
-/FilesParsingTest.java
-/SelenideFilesTest.java
+qa/FilesParsingTest.java
+qa/SelenideFilesTest.java
