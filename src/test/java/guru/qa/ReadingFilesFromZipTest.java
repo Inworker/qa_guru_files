@@ -22,7 +22,7 @@ public class ReadingFilesFromZipTest {
         // Проверяем, что ресурс существует
         InputStream resourceStream = cl.getResourceAsStream("WorkDavay.zip");
         if (resourceStream == null) {
-            throw new FileNotFoundException("PDF файл не найден в архиве: WorkDavay.zip");
+            throw new FileNotFoundException("Не найден архив: WorkDavay.zip");
         }
 
         try (ZipInputStream zis = new ZipInputStream(resourceStream)) {
@@ -32,7 +32,7 @@ public class ReadingFilesFromZipTest {
             while ((entry = zis.getNextEntry()) != null) {
                 System.out.println("В архиве есть файл: " + entry.getName());
 
-                // Более гибкая проверка имени файла
+                // Проверка имени файла
                 if (entry.getName().endsWith("WorkDavay.pdf")) {
                     PDF pdf = new PDF(zis);
 
@@ -128,8 +128,6 @@ public class ReadingFilesFromZipTest {
                     Assertions.assertEquals("Philip", firstName);
                     Assertions.assertEquals("Gent", lastName);
                     System.out.println("Все проверки успешны, идем пить пиво");
-
-
 
                     xls = true;
                 }

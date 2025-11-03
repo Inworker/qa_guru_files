@@ -1,5 +1,4 @@
 package guru.qa;
-
 import com.google.gson.Gson;
 import guru.qa.model.Glossary;
 import guru.qa.model.GlossaryInner;
